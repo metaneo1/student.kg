@@ -18,7 +18,7 @@ import java.util.stream.Collectors;
 
 @Service
 public class UserServiceImpl implements UserService {
-
+    User signedUser;
     @Autowired
     private UserRepository userRepository;
 
@@ -45,6 +45,8 @@ public class UserServiceImpl implements UserService {
         if (user == null){
             throw new UsernameNotFoundException("Invalid username or password.");
         }
+        signedUser=user;
+        System.out.println(signedUser.getEmail()+"=============================");
         return new org.springframework.security.core.userdetails.User(user.getEmail(),
                 user.getPassword(),
                 mapRolesToAuthorities(user.getRoles()));

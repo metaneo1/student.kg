@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <!-- Required Meta Tags -->
     <meta charset="UTF-8">
@@ -45,22 +45,22 @@
                         </div>  
                         <div class="main-menu main-menu-light">
                             <ul>
-                                <li class="active"><a href="index.html">home</a></li>
-                                <li><a href="about.html">about us</a></li>
-                                <li><a href="job-category.html">category</a></li>
+                                <li class="active"><a th:href="@{/home}">home</a></li>
+                                <li><a th:href="@{/aboutUs}">about us</a></li>
+                                <li><a th:href="@{/jobcategory}">category</a></li>
                                 <li><a href="#">blog</a>
                                     <ul class="sub-menu">
-                                        <li><a href="blog-home.html">Blog Home</a></li>
-                                        <li><a href="blog-details.html">Blog Details</a></li>
+                                        <li><a th:href="@{/blog-home}">Blog Home</a></li>
+                                        <li><a th:href="@{/blog-details}">Blog Details</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="contact-us.html">contact</a></li>
+                                <li><a th:href="@{/contact}">contact</a></li>
                                 <li><a href="#">pages</a>
                                     <ul class="sub-menu">
-                                        <li><a href="job-search.html">Job Search</a></li>
-                                        <li><a href="job-single.html">Job Single</a></li>
-                                        <li><a href="pricing-plan.html">Pricing Plan</a></li>
-                                        <li><a href="elements.html">Elements</a></li>
+                                        <li><a th:href="@{/job-search}">Job Search</a></li>
+                                        <li><a th:href="@{/job-single}">Job Single</a></li>
+                                        <li><a th:href="@{/pricing-plan}">Pricing Plan</a></li>
+                                        <li><a th:href="@{/elements}">Elements</a></li>
                                     </ul>
                                 </li>
                                 <li class="menu-btn">
