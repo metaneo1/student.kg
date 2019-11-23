@@ -19,7 +19,7 @@ public class Role {
     public Role(String name) {
         this.name = name;
     }
-
+    @ManyToOne
     public Long getId() {
         return id;
     }
