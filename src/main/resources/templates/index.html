@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th = "http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
 <head>
     <!-- Required Meta Tags -->
     <meta charset="UTF-8">
@@ -55,6 +55,17 @@
                                 </ul>
                             </li>
                             <li><a th:href="@{/contact}">contact</a></li>
+                            <div class="container">
+                                <p>
+                                    &copy; Memorynotfound.com
+                                    <span sec:authorize="isAuthenticated()" style="display: inline-block;">
+                      | Logged user: <span sec:authentication="name"></span> |
+                       Roles: <span sec:authentication="principal.authorities"></span> |
+                      <a th:href="@{/logout}">Sign Out</a>
+                  </span>
+                                </p>
+                            </div>
+
                             <li><a href="#">pages</a>
                                 <ul class="sub-menu">
                                     <li><a th:href="@{/job-search}">Job Search</a></li>
