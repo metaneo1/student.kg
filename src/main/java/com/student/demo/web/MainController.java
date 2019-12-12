@@ -19,7 +19,8 @@ public class MainController {
         return "user/index";
     }
     @GetMapping("/home")
-    public String home() { return "index"; }
+    public String home() {
+        return "index"; }
     @GetMapping("/aboutUs")
     public String aboutUs(){ return "about"; }
     @GetMapping("/category")
@@ -42,10 +43,7 @@ public class MainController {
     public String jobCategory(){
         return "job-category";
     }
-    @GetMapping("/job-search")
-    public String jobSearch(){
-        return  "job-search";
-    }
+
     @GetMapping("/job-single")
     public String jobSingle(){
         return  "job-single";
@@ -58,5 +56,8 @@ public class MainController {
     public String elements(){
         return  "elements";
     }
-
+    @GetMapping("/profile")
+    public String profile(){
+        return  "home4";
+    }
 }

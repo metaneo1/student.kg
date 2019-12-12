@@ -18,7 +18,7 @@ import java.util.stream.Collectors;
 
 @Service
 public class UserServiceImpl implements UserService {
-    User signedUser;
+    public static User signedUser;
     @Autowired
     private UserRepository userRepository;
 
