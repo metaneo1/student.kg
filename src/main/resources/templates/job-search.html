@@ -43,7 +43,7 @@
                             <span></span>
                             <span></span>
                             <span></span>
-                        </div>  
+                        </div>
                         <div class="main-menu main-menu-light">
                             <ul>
                                 <li class="active"><a th:href="@{/home}">home</a></li>
@@ -132,91 +132,21 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="single-job mb-4 d-lg-flex justify-content-between">
-                        <div class="job-text">
-                            <h4>Assistant Executive - Production/ Quality Control</h4>
-                            <ul class="mt-4">
-                                <li class="mb-3"><h5><i class="fa fa-map-marker"></i> new yourk, USA</h5></li>
-                                <li class="mb-3"><h5><i class="fa fa-pie-chart"></i> Applied Chemistry & Chemical Engineering / Chemistry</h5></li>
-                                <li><h5><i class="fa fa-clock-o"></i> Deadline Deadline: Dec 11, 2018</h5></li>
-                            </ul>
-                        </div>
-                        <div class="job-img align-self-center">
-                            <img src="assets/images/job1.png" alt="job">
-                        </div>
-                        <div class="job-btn align-self-center">
-                            <a href="#" class="third-btn job-btn1">full time</a>
-                            <a href="#" class="third-btn">apply</a>
-                        </div>
+                    <div class="container">
+                        <table class='table table-bordered table-condensed table-striped table-hover'>
+                            <tr><th>Name</th><th>number</th><th>Subject(s)</th><th>City</th></tr>
+                            <tr th:each="user : ${users}">
+                                <td th:text="${user.name}">1</td>
+                                <td><a href="#" th:text="${user.surname}">Title ...</a></td>
+                                <td th:text="${user.email}">Text ...</td>
+                            </tr>
+                            <tr class="table-row"data-href="http://tutorialsplane.com"><td th:text="${name}"></td><td>jhone@gmail.com</td><td>USA</td></tr>
+                            <tr class="table-row" data-href="http://tutorialsplane.com"><td>Kelly</td><td>kelly@gmail.com</td><td>USA</td></tr>
+                            <tr class="table-row" data-href="http://tutorialsplane.com"><td>Kamana</td><td>kamna@gmail.com</td><td>India</td></tr>
+                            <tr class="table-row" data-href="http://tutorialsplane.com"><td>Anay</td><td>anay@gmail.com</td><td>Canada</td></tr>
+                        </table>
                     </div>
-                    <div class="single-job mb-4 d-lg-flex justify-content-between">
-                        <div class="job-text">
-                            <h4>Asst. Manager, Production (Woven Dyeing)</h4>
-                            <ul class="mt-4">
-                                <li class="mb-3"><h5><i class="fa fa-map-marker"></i> new yourk, USA</h5></li>
-                                <li class="mb-3"><h5><i class="fa fa-pie-chart"></i> Applied Chemistry & Chemical Engineering / Chemistry</h5></li>
-                                <li><h5><i class="fa fa-clock-o"></i> Deadline Deadline: Dec 11, 2018</h5></li>
-                            </ul>
-                        </div>
-                        <div class="job-img align-self-center">
-                            <img src="assets/images/job2.png" alt="job">
-                        </div>
-                        <div class="job-btn align-self-center">
-                            <a href="#" class="third-btn job-btn2">full time</a>
-                            <a href="#" class="third-btn">apply</a>
-                        </div>
-                    </div>
-                    <div class="single-job mb-4 d-lg-flex justify-content-between">
-                        <div class="job-text">
-                            <h4>Deputy Manager/ Assistant Manager - Footwear</h4>
-                            <ul class="mt-4">
-                                <li class="mb-3"><h5><i class="fa fa-map-marker"></i> new yourk, USA</h5></li>
-                                <li class="mb-3"><h5><i class="fa fa-pie-chart"></i> Applied Chemistry & Chemical Engineering / Chemistry</h5></li>
-                                <li><h5><i class="fa fa-clock-o"></i> Deadline Deadline: Dec 11, 2018</h5></li>
-                            </ul>
-                        </div>
-                        <div class="job-img align-self-center">
-                            <img src="assets/images/job3.png" alt="job">
-                        </div>
-                        <div class="job-btn align-self-center">
-                            <a href="#" class="third-btn job-btn3">full time</a>
-                            <a href="#" class="third-btn">apply</a>
-                        </div>
-                    </div>
-                    <div class="single-job mb-4 d-lg-flex justify-content-between">
-                        <div class="job-text">
-                            <h4>R&D Manager (Technical Lab Department)</h4>
-                            <ul class="mt-4">
-                                <li class="mb-3"><h5><i class="fa fa-map-marker"></i> new yourk, USA</h5></li>
-                                <li class="mb-3"><h5><i class="fa fa-pie-chart"></i> Applied Chemistry & Chemical Engineering / Chemistry</h5></li>
-                                <li><h5><i class="fa fa-clock-o"></i> Deadline Deadline: Dec 11, 2018</h5></li>
-                            </ul>
-                        </div>
-                        <div class="job-img align-self-center">
-                            <img src="assets/images/job4.png" alt="job">
-                        </div>
-                        <div class="job-btn align-self-center">
-                            <a href="#" class="third-btn job-btn4">full time</a>
-                            <a href="#" class="third-btn">apply</a>
-                        </div>
-                    </div>
-                    <div class="single-job d-lg-flex justify-content-between">
-                        <div class="job-text">
-                            <h4>Manager/ Asst. Manager (Quality Assurance)</h4>
-                            <ul class="mt-4">
-                                <li class="mb-3"><h5><i class="fa fa-map-marker"></i> new yourk, USA</h5></li>
-                                <li class="mb-3"><h5><i class="fa fa-pie-chart"></i> Applied Chemistry & Chemical Engineering / Chemistry</h5></li>
-                                <li><h5><i class="fa fa-clock-o"></i> Deadline Deadline: Dec 11, 2018</h5></li>
-                            </ul>
-                        </div>
-                        <div class="job-img align-self-center">
-                            <img src="assets/images/job5.png" alt="job">
-                        </div>
-                        <div class="job-btn align-self-center">
-                            <a href="#" class="third-btn job-btn2">full time</a>
-                            <a href="#" class="third-btn">apply</a>
-                        </div>
-                    </div>
+
                 </div>
             </div>
             <div class="more-job-btn mt-5 text-center">
@@ -305,5 +235,12 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="assets/js/vendor/jquery.nice-select.min.js"></script>
     <script src="assets/js/vendor/ion.rangeSlider.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>
+        $(document).ready(function($) {
+            $(".table-row").click(function() {
+                window.document.location = $(this).data("href");
+            });
+        });
+    </script>
 </body>
 </html>
