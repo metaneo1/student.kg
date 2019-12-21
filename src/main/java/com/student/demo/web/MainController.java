@@ -56,8 +56,5 @@ public class MainController {
     public String elements(){
         return  "elements";
     }
-    @GetMapping("/profile")
-    public String profile(){
-        return  "home4";
-    }
+
 }

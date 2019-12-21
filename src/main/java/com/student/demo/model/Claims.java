@@ -14,8 +14,7 @@ public class Claims {
     @ManyToOne
     @JoinColumn(name="user_id",nullable = false)
     private User user;
-    @OneToOne(targetEntity = Subject.class)
-    private Subject subject;
+
     @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "created_at", nullable = false, updatable = false)
     @CreatedDate
@@ -39,13 +38,7 @@ public class Claims {
         this.createdAt = createdAt;
     }
 
-    public Subject getSubject() {
-        return subject;
-    }
 
-    public void setSubject(Subject subject) {
-        this.subject = subject;
-    }
 
     public Long getId() {
         return id;

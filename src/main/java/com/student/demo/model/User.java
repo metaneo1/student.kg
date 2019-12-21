@@ -16,14 +16,13 @@ public class User {
     private String lastName;
     private String email;
     private String password;
-    @OneToMany(mappedBy = "user")
-    private Set<Claims> subjects;
 
     @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinTable(
             name = "users_roles",
             joinColumns = @JoinColumn(
-                    name = "user_id", referencedColumnName = "id"),
+                    name = "user_id", referencedColumn
+                    Name = "id"),
             inverseJoinColumns = @JoinColumn(
                     name = "role_id", referencedColumnName = "id"))
     private Collection<Role> roles;
@@ -94,13 +93,7 @@ public class User {
         this.roles = roles;
     }
 
-    public Set<Claims> getSubjects() {
-        return subjects;
-    }
 
-    public void setSubjects(Set<Claims> subjects) {
-        this.subjects = subjects;
-    }
     @Override
     public String toString() {
         return "User{" +
