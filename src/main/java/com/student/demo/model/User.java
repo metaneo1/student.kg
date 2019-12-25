@@ -16,8 +16,6 @@ public class User {
     private String lastName;
     private String email;
     private String password;
-    @OneToMany(mappedBy = "user")
-    private Set<Claims> subjects;
 
     @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinTable(
@@ -94,13 +92,7 @@ public class User {
         this.roles = roles;
     }
 
-    public Set<Claims> getSubjects() {
-        return subjects;
-    }
 
-    public void setSubjects(Set<Claims> subjects) {
-        this.subjects = subjects;
-    }
     @Override
     public String toString() {
         return "User{" +

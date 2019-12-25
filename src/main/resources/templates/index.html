@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml" >
+<!--<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">-->
+
 <head>
     <!-- Required Meta Tags -->
     <meta charset="UTF-8">
@@ -20,6 +22,35 @@
     <link rel="stylesheet" href="assets/css/owl-carousel.min.css">
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+
+    <style>
+        #navBarProfileDiv{
+            background-color: #ff9902;
+            border: 1px solid;
+            border-radius: 5px;
+            color: #fff !important;
+            font-family: "Open Sans",sans-serif;
+            text-transform: uppercase;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        #navBarProfileDiv:hover{
+            background-color: black;
+        }
+        #navBarProfileDiv a{
+            color: #fff;
+        }
+        #navBarProfileDiv .dropdown-menu a{
+            color: black;
+        }
+    </style>
+
 </head>
 <body>
     <!-- Preloader Starts -->
@@ -56,16 +87,19 @@
                             </li>
                             <li><a th:href="@{/contact}">contact</a></li>
 
-                            <!-- vremennyiiiiiiiiiiiiiiiiiiiiiiiiiiiiii -->
-                            <div class="container">
-                                <p>
-                                    <span sec:authorize="isAuthenticated()" style="display: inline-block;">
-                      | Logged user: <span sec:authentication="name"></span> |
-                       Roles: <span sec:authentication="principal.authorities"></span>
-                      <a th:href="@{/logout}">Sign Out</a>
-                  </span>
-                                </p>
-                            </div>
+<!--                            &lt;!&ndash; vremennyiiiiiiiiiiiiiiiiiiiiiiiiiiiiii &ndash;&gt;-->
+<!--                            <div class="container">-->
+<!--                                <p>-->
+<!--                                    <span sec:authorize="isAuthenticated()" style="display: inline-block;">-->
+<!--                                      | Logged user: <span sec:authentication="name"></span> |-->
+<!--                                       Roles: <span sec:authentication="principal.authorities"></span>-->
+<!--                                      <a th:href="@{/logout}">Sign Out</a>-->
+<!--                                  </span>-->
+<!--                                </p>-->
+<!--                            </div>-->
+<!--                            <h2 sec:authorize="hasAnyAuthority('ROLE_ADMIN','ROLE_USER')"><a th:href="@{/job-search}" type="button" class="btn btn-success" ></a>-->
+<!--                            <h2 sec:authorize="!isAuthenticated()"><a th:href="@{/job-search}" type="button" class="btn btn-success" ></a>-->
+<!--                            <h2 sec:authorize="isAuthenticated()"><a th:href="@{/job-search}" type="button" class="btn btn-success" ></a>-->
 
                             <li><a href="#">pages</a>
                                 <ul class="sub-menu">
@@ -76,8 +110,22 @@
                                 </ul>
                             </li>
                             <li class="menu-btn">
-                                <a th:href="@{/login}" class="login">log in</a>
-                                <a th:href="@{/registration}" class="template-btn">sign up</a>
+                                <a sec:authorize="!isAuthenticated()"  th:href="@{/login}" class="login">log in</a>
+                                <a sec:authorize="!isAuthenticated()"  th:href="@{/registration}" class="template-btn">sign up</a>
+<!--                                <a sec:authorize="isAuthenticated()"  th:href="@{/logout}" class="template-btn">Logout</a>-->
+
+                                <div id="navBarProfileDiv" class="pull-right" sec:authorize="isAuthenticated()" >
+                                    <ul class="nav pull-right">
+                                        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Welcome, <span th:text="${#authentication.getPrincipal().getUsername()}"></span> <b class="caret"></b></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a th:href="@{/profile}"><i class="icon-cog"></i>My Profile</a></li>
+                                                <li class="divider"></li>
+                                                <li><a th:href="@{/logout}"><i class="icon-off"></i>Logout</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+
                             </li>
                         </ul>
                     </div>

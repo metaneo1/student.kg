@@ -11,13 +11,16 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.web.context.annotation.ApplicationScope;
 
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.stream.Collectors;
 
 @Service
+@ApplicationScope
 public class UserServiceImpl implements UserService {
+
     public static User signedUser;
     @Autowired
     private UserRepository userRepository;
@@ -47,6 +50,8 @@ public class UserServiceImpl implements UserService {
         }
         signedUser=user;
         System.out.println(signedUser.getEmail()+"=============================");
+        System.out.println(signedUser.getFirstName()+"=============================");
+
         return new org.springframework.security.core.userdetails.User(user.getEmail(),
                 user.getPassword(),
                 mapRolesToAuthorities(user.getRoles()));
