@@ -11,7 +11,7 @@ visit deployed app on heroku - https://students-kg.herokuapp.com/
 
 * [Spring Boot](https://spring.io/projects/spring-boot) - The web framework used
 * [Maven](https://maven.apache.org/) - Dependency Management
-* [Maven](https://getbootstrap.com/docs/4.4/getting-started/introduction/) - Bootstrap
+* [Bootstrap](https://getbootstrap.com/docs/4.4/getting-started/introduction/) - Bootstrap
 
 ## Contributors:
 ### Management
