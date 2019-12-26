@@ -1,6 +1,6 @@
 # student.kg
-Service for tutoring in Kyrgyzstan. The purpose of this project is to create a website for tutors that connects tutors and students, parents who are in need a tutor for their children or for themselves. This project is new to this society and it’s the only one that been created and This has been implemented under the guidance of Alatoo-Enactus team. At the same time this website will make tutors easily findable because all their data will be collected so people who are in need can find them easily.
-This SK website will be connecting tutors and who ever in need of them in simple way, if this project is successfully launched it will take a huge part by helping the society to find or communicate with tutors.
+Service for tutoring in Kyrgyzstan. The purpose of this project is to create a website for tutors that connects tutors and students, parents who are in need a tutor for their children or for themselves. This project is new in Kyrgyzstan and it’s the only one that was created. The service has been implemented under the guidance of Alatoo-Enactus team. 
+Student.kg website will be connecting tutors and who ever in need of them in a simple way. If this project is successfully launched it will take a positive difference by helping the society to find or communicate with tutors and make education more available.
 
 ## Prerequisities
 
