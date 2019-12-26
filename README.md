@@ -5,7 +5,7 @@ This SK website will be connecting tutors and who ever in need of them in simple
 ## Prerequisities
 
 to clone the project - https://git.heroku.com/students-kg.git
-visit deployed app on heroku - https://students-kg.herokuapp.com/4
+visit deployed app on heroku - https://students-kg.herokuapp.com/
 
 ## Technologies Used
 
