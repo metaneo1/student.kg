@@ -7,3 +7,5 @@ Scrum Master - Venera Kanybekova
 Dev team - Aidar Abakir, Ali Murteza Yesil, Aliia Shalpykova, Nursultan Karybekov, Nuriddin Kadyrov, Abdisalam Keise, Meerim, Omersydyk Kozha Erhanovich 
 
 Product Owner - Enactus Alatoo team
+
+Link to the heroku website - https://git.heroku.com/students-kg.git
