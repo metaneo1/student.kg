@@ -8,4 +8,6 @@ Dev team - Aidar Abakir, Ali Murteza Yesil, Aliia Shalpykova, Nursultan Karybeko
 
 Product Owner - Enactus Alatoo team
 
-Link to the heroku website - https://git.heroku.com/students-kg.git
+Deployed Heroku link - https://students-kg.herokuapp.com/profile
+
+
